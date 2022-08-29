@@ -6,8 +6,10 @@ kafka-config:
   schema-registry-url-key: schema.registry.url
   schema-registry-url: http://localhost:8081
   topic-name: nec-event-topic
+  topic-name-bpm: nec-event-topic-bpm
   topic-names-to-create:
     - nec-event-topic
+    - nec-event-topic-bpm
 
 kafka-consumer-config:
   key-deserializer: org.apache.kafka.common.serialization.LongDeserializer
