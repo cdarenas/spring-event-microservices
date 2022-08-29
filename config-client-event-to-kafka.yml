@@ -31,6 +31,7 @@ kafka-config:
   topic-name: nec-event-topic
   topic-names-to-create:
     - nec-event-topic
+    - nec-event-topic-bpm
   num-of-partitions: 3
   replication-factor: 3
 
