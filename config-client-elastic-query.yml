@@ -1,0 +1,21 @@
+event-query-service:
+  version: v1
+
+server:
+  port: 8184
+  servlet:
+    context-path: /event-query-service
+
+elastic-query-config:
+  text-field: text
+
+elastic-config:
+  index-name: event-index
+  connection-url: http://localhost:9200
+  connect-timeout-ms: 5000
+  socket-timeout-ms: 30000
+
+user-config:
+  username: test
+  password: test
+  roles: USER
