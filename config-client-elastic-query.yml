@@ -8,6 +8,8 @@ server:
 
 elastic-query-config:
   text-field: text
+  current-task-field: currentTask
+  proc-def-id-field: procDefId
 
 elastic-config:
   index-name: event-index
