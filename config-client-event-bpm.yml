@@ -1,5 +1,26 @@
 server:
   port: 8183
+  servlet:
+    context-path: /event-bpm-service
+
+spring:
+  datasource:
+    driver: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/activiti
+    username: postgres
+    password: pascal78
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL92Dialect
+    hibernate.ddl-auto: update
+
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+      write-date-timestamps-as-nanoseconds: false
+    date-format: MM/dd/yyyy HH:mm
 
 kafka-config:
   bootstrap-servers: localhost:19092, localhost:29092, localhost:39092
