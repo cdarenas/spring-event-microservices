@@ -12,6 +12,10 @@ event-query-web-client:
     content-type: 'application/vnd.api.v1+json'
     accept-type: 'application/vnd.api.v1+json'
     base-url: 'http://event-query-service/event-query-service/documents'
+  query-by-text:
+    method: POST
+    uri: "/get-document-by-text"
+    accept: ${event-query-web-client.webclient.accept-type}
 
 spring:
   thymeleaf:
