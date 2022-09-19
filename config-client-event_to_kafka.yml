@@ -1,5 +1,7 @@
 server:
   port: 8181
+  servlet:
+    context-path: /event-to-kafka-service
 
 event-to-kafka-service:
   event-keywords:
@@ -45,3 +47,8 @@ kafka-producer-config:
   linger-ms: 5
   request-timeout-ms: 60000
   retry-count: 5
+
+user-config:
+  username: test
+  password: test
+  roles: USER

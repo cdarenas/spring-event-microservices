@@ -11,10 +11,18 @@ event-query-web-client:
     max-in-memory-size: 10485760 # 10MB
     content-type: 'application/vnd.api.v1+json'
     accept-type: 'application/vnd.api.v1+json'
-    base-url: 'http://event-query-service/event-query-service/documents'
+    base-url: 'http://localhost:8184/event-query-service/documents'
   query-by-text:
     method: POST
     uri: "/get-document-by-text"
+    accept: ${event-query-web-client.webclient.accept-type}
+  query-by-task:
+    method: POST
+    uri: "/get-document-by-filter"
+    accept: ${event-query-web-client.webclient.accept-type}
+  query-definitions:
+    method: GET
+    uri: "/get-process-definitions"
     accept: ${event-query-web-client.webclient.accept-type}
 
 spring:
